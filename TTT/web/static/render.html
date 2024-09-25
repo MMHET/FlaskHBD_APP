@@ -1,0 +1,127 @@
+{% extends "index.html" %} {% block title %} FLAGS2 {% endblock %}
+
+{% block content %}
+<!-- This is the flags -->
+<!--this is the flags -->
+
+<div class="container text-center">
+  <div class="row g-5">
+    {% for i in range(12) %}
+    <div class="col-4">
+      <!-- Each div will get a unique bgp class and image -->
+      <div class="p-5 keyF bgp{{ i+1 }}" data-answer="{{ answers[i] }}"
+        style="background-image: url('{{ images[i] }}'); color: transparent">
+        Custom column padding
+      </div>
+
+      <!-- Input field for user to enter the country name -->
+      <input class="form-control testform" type="text" name="answer_{{ i }}" placeholder="Enter country"
+        oninput="checkAnswer(this)" autocomplete="off">
+    </div>
+    {% endfor %}
+
+
+
+    <!--
+      <div class="col-4">
+        <div class="p-5 keyM bgp2" style="background-image: url('{{ images[i] }}');">Custom column padding</div>
+
+        <input class="form-control testform1" type="text" name="kenya" id="kenya">
+
+      </div>
+
+      <div class="col-4">
+        <div class="p-5 keyL bgp3" style="background-image: url('{{ image_selct }}');">Custom column padding</div>
+
+        <input class="form-control testform2" type="text" name="kenya" id="kenya">
+
+      </div>
+
+
+      <div class="col-4">
+        <div class="p-5 keyF bgp4" style="background-image: url('{{ image_selct }}');">custom column padding </div>
+
+        <input class="form-control testform" type="text" name="kenya" id="kenya">
+
+      </div>
+      <div class="col-4">
+        <div class="p-5 keyM bgp5">Custom column padding</div>
+
+        <input class="form-control testform1" type="text" name="kenya" id="kenya">
+
+      </div>
+      <div class="col-4">
+        <div class="p-5 keyL bgp6">Custom column padding</div>
+
+        <input class="form-control testform2" type="text" name="kenya" id="kenya">
+
+      </div>
+      <div class="col-4">
+        <div class="p-5 keyF bgp7">custom column padding </div>
+
+        <input class="form-control testform" type="text" name="kenya" id="kenya">
+
+      </div>
+      <div class="col-4">
+        <div class="p-5 keyM bgp8">Custom column padding</div>
+
+        <input class="form-control testform1" type="text" name="kenya" id="kenya">
+
+      </div>
+      <div class="col-4">
+        <div class="p-5 keyL bgp9">Custom column padding</div>
+
+        <input class="form-control testform2" type="text" name="kenya" id="kenya">
+
+      </div>
+
+
+
+      <div class="col-4">
+        <div class="p-5 keyF bgp10">custom column padding </div>
+
+        <input class="form-control testform" type="text" name="kenya" id="kenya">
+
+      </div>
+      <div class="col-4">
+        <div class="p-5 keyM bgp11">Custom column padding</div>
+
+        <input class="form-control testform1" type="text" name="kenya" id="kenya">
+
+      </div>
+      <div class="col-4">
+        <div class="p-5 keyL bgp12">Custom column padding</div>
+
+        <input class="form-control testform2" type="text" name="kenya" id="kenya">
+
+      </div>
+    -->
+
+
+
+  </div>
+</div>
+
+<script>
+  function checkAnswer(input) {
+    // Get the parent div that contains the background image
+    const card = input.previousElementSibling;
+
+    // Get the correct answer from the data-answer attribute
+    const correctAnswer = card.getAttribute('data-answer').toLowerCase();
+
+    // Get the user's input and convert it to lowercase for comparison
+    const userInput = input.value.toLowerCase().trim();
+
+    // If the user's input matches the correct answer, you can trigger the flip or success state
+    if (userInput === correctAnswer) {
+      card.classList.add('correct-answer'); // Add a class for visual feedback (like a flip or highlight)
+      alert('Correct!'); // Optional alert for testing
+    }
+  }
+</script>
+{%endblock%}
+
+{% block content1 %}
+<!--This where we will implement the birthday card -->
+{% endblock %}

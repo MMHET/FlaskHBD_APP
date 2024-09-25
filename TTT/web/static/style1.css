@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: url('temp/15.PNG') no-repeat center center fixed; 
+    background-size: cover; /* Ensure the background covers the entire screen */
+    color: yellow;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 500px;
+}
+
+.crawl-container {
+    width: 80%; /* Adjusted width for better display on small devices */
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(20deg);
+}
+
+.star-wars-intro {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.crawl-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#starDust {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#gemini {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8); /* Adjusted scale to fit better on smaller screens */
+    color: yellow;
+    font-size: 1.5em; /* Adjusted font size for better visibility */
+    text-align: center;
+    opacity: 0;
+}
+
+.gemini-hidden {
+    display: none;
+}
+
+.gemini-visible {
+    display: block;
+}
+
+.gemini-fade-in {
+    animation: geminiFadeIn 2s ease forwards;
+}
+
+.gemini-fade-out {
+    animation: geminiFadeOut 2s ease forwards;
+}
+
+@keyframes geminiFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes geminiFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Media query to adjust background and Gemini size on smaller screens */
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Retain cover for smaller screens */
+    }
+
+    .crawl-container {
+        width: 90%; /* Adjusted width for better display on smaller devices */
+    }
+
+    .star-wars-intro {
+        font-size: 0.8em; /* Adjusted font size for smaller screens */
+    }
+
+    #gemini {
+        transform: translate(-50%, -50%) scale(0.5); /* Adjusted scale for smaller screens */
+        font-size: 1em; /* Adjusted font size for smaller screens */
+    }
+}
