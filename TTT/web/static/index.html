@@ -27,7 +27,7 @@
       <button class="btn btn-pause me-3">Pause</button>
       -->
       <!-- Reset Button -->
-      <button class="btn btn-reset me-4" onclick="resetGame()">Reset</button>
+      <button class="btn btn-reset me-4" onclick="resetGame(), , window.location.href='{{ url_for('all_funcs.all_funcs_route') }}'">Reset</button>
 
       <!-- Time Display -->
       <span class="navbar-text time-display" id="time">{{curr_time}}</span>
