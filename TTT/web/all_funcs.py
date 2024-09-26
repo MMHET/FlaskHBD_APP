@@ -1,7 +1,7 @@
 import random
 from flask import Blueprint, render_template
 
-all_funcs = Blueprint('all_funcs', __name__, template_folder='C:/Users/loswe/Desktop/HBD26/TTT/web/static')
+all_funcs = Blueprint('all_funcs', __name__, template_folder='TTT/web/static')
 
 def count_select(num_images=12):
     # List of image files and their correct answers
