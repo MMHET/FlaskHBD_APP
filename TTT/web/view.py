@@ -1,7 +1,7 @@
 from flask import Blueprint,render_template
 import time
 
-view = Blueprint('view',__name__,template_folder='web/static')
+view = Blueprint('view',__name__,template_folder='TTT\web\static')
 
 def timelocal():
     curr_time = time.strftime("%H:%M", time.localtime())
