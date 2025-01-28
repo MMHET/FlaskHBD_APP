@@ -28,4 +28,4 @@ A fun and interactive web application where users identify countries based on th
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/country-guessing-game.git
+   git clone https://github.com/MMHET/FlaskHBD_APP/tree/main/TTT
